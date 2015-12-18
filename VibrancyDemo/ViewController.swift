@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: UITableViewDatasource & Delegate
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 11
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -52,6 +52,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return cell
         case 9:
             let cell = tableView.dequeueReusableCellWithIdentifier("Cell10", forIndexPath: indexPath)
+            return cell
+        case 10:
+            let cell = tableView.dequeueReusableCellWithIdentifier("Cell_Icons", forIndexPath: indexPath)
             return cell
         default:
             return UITableViewCell(style: .Default, reuseIdentifier: "Cell1")
